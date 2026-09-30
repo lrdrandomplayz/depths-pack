@@ -1,0 +1,27 @@
+# Extra vanilla paths forced on every player (relative to assets/minecraft/).
+# Trailing / = whole directory.
+# Invisibility / potion effect particles
+particles/entity_effect.json
+textures/particle/effect_0.png
+textures/particle/effect_1.png
+textures/particle/effect_2.png
+textures/particle/effect_3.png
+textures/particle/effect_4.png
+textures/particle/effect_5.png
+textures/particle/effect_6.png
+textures/particle/effect_7.png
+atlases/particles.json
+atlases/blocks.json
+# Core shaders: stops shader-based xray and shader-based invis reveals
+shaders/core/
+shaders/include/
+# Fluid textures (not referenced through models)
+textures/block/water_still.png
+textures/block/water_still.png.mcmeta
+textures/block/water_flow.png
+textures/block/water_flow.png.mcmeta
+textures/block/water_overlay.png
+textures/block/lava_still.png
+textures/block/lava_still.png.mcmeta
+textures/block/lava_flow.png
+textures/block/lava_flow.png.mcmeta

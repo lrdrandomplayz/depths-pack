@@ -1,0 +1,11 @@
+name: DepthsGuard
+version: '${version}'
+main: net.thedepths.guard.DepthsGuardPlugin
+api-version: '1.21'
+description: Hides invisibility particles server-side and enforces the Depths server resource pack.
+authors: [kaydnn]
+
+permissions:
+  depthsguard.bypass:
+    description: Not kicked for declining or failing the server resource pack.
+    default: false

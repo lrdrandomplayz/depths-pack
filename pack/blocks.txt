@@ -1,0 +1,68 @@
+# Blocks whose blockstate, models (with parents) and textures are forced to vanilla.
+# Stone family / underground filler
+stone
+deepslate
+cobbled_deepslate
+tuff
+granite
+diorite
+andesite
+calcite
+smooth_basalt
+dripstone_block
+infested_stone
+infested_deepslate
+bedrock
+obsidian
+crying_obsidian
+amethyst_block
+budding_amethyst
+# Soil
+dirt
+coarse_dirt
+rooted_dirt
+gravel
+clay
+sand
+red_sand
+sandstone
+red_sandstone
+# Fluids
+water
+lava
+# Ores
+coal_ore
+deepslate_coal_ore
+iron_ore
+deepslate_iron_ore
+copper_ore
+deepslate_copper_ore
+gold_ore
+deepslate_gold_ore
+redstone_ore
+deepslate_redstone_ore
+emerald_ore
+deepslate_emerald_ore
+lapis_ore
+deepslate_lapis_ore
+diamond_ore
+deepslate_diamond_ore
+raw_iron_block
+raw_copper_block
+raw_gold_block
+# Nether
+netherrack
+basalt
+blackstone
+gilded_blackstone
+soul_sand
+soul_soil
+magma_block
+nether_gold_ore
+nether_quartz_ore
+ancient_debris
+# End
+end_stone
+# Things xray hunts for
+spawner
+trial_spawner

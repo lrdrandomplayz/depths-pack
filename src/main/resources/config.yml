@@ -1,0 +1,13 @@
+# DepthsGuard
+
+# Invisible players send no potion particles at all, so no resource pack or mod
+# can make them easier to see. Their own effect icon still shows.
+hide-invisibility-particles: true
+
+# Kick players who decline the server resource pack, or whose download fails.
+# server.properties require-resource-pack=true already kicks on decline; this is a backup.
+resource-pack:
+  kick-on-decline: true
+  kick-on-fail: true
+  decline-message: "<red>The Depths SMP requires the server resource pack.</red>\n<gray>Rejoin and press <white>Yes</white> when asked.</gray>"
+  fail-message: "<red>The server resource pack failed to download.</red>\n<gray>Rejoin to try again. If it keeps failing, tell a staff member.</gray>"
