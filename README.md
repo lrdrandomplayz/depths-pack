@@ -6,7 +6,7 @@ Anti-xray and anti-invis-particle setup for The Depths SMP (Paper 1.21.11).
 |---|---|---|
 | Server resource pack | Xray **resource packs** and invis-particle packs (Obvious Invisibility Particles, InvisAlert+) | `pack/` |
 | Paper anti-xray (engine-mode 2) | **All** xray: packs, mods, hacked clients | `server-config/` |
-| DepthsGuard plugin | Invisibility particles are never sent, so no pack or mod can show them | `src/` |
+| DepthsGuard plugin | Kicks players who decline/fail the pack. Optional `hide-invisibility-particles` (off by default: vanilla faint particles) | `src/` |
 
 ## Resource pack
 `python pack/build_pack.py [version]` reads the vanilla client jar
@@ -31,11 +31,12 @@ A server pack always loads above the player's own packs and can't be moved, so t
 3. Copy `server-config/world_nether-paper-world.yml` to `world_nether/paper-world.yml` and
    `server-config/world_the_end-paper-world.yml` to `world_the_end/paper-world.yml`
    (merge by hand if those files already have settings).
-4. Put `build/libs/DepthsGuard-1.0.0.jar` in `plugins/`, restart.
+4. Put `build/libs/DepthsGuard-1.0.1.jar` in `plugins/`, restart.
 
 When the pack changes, rebuild, upload under a **new** URL/tag and update the sha1, or clients keep the cached copy.
 
 ## Tested (local server in `run/`, 2026-09-30)
-- Invisibility via /effect: observer receives no effect particles; a control Speed effect still does.
+- Invisibility via /effect with hide-invisibility-particles: true: observer receives no effect particles; a control Speed effect still does.
+- Default (false): invisibility keeps its vanilla faint particles; the pack keeps their textures vanilla.
 - Anti-xray: client saw ~41k diamond ores in a 64x64 area; 0 of 25 sampled were real.
 - Declining the pack: kicked with the required-pack message.
