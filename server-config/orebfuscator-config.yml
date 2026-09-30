@@ -555,7 +555,6 @@ proximity:
       minecraft:purpur_block: {}
       minecraft:end_rod: {}
       minecraft:dragon_head: {}
-      minecraft:elytra: {}
       tag(minecraft:anvil): {}
       tag(minecraft:beehives): {}
       tag(minecraft:beds): {}

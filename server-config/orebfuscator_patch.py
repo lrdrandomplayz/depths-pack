@@ -33,7 +33,7 @@ ADD = {
     'obfuscation-end': BASE,
     'proximity-overworld': ORES + STRUCTURES + BASE,
     'proximity-nether': NETHER_ORES + NETHER_STRUCTURES + BASE,
-    'proximity-end': BASE + ['minecraft:purpur_block', 'minecraft:end_rod', 'minecraft:dragon_head', 'minecraft:elytra'],
+    'proximity-end': BASE + ['minecraft:purpur_block', 'minecraft:end_rod', 'minecraft:dragon_head'],
 }
 
 path = sys.argv[1]
