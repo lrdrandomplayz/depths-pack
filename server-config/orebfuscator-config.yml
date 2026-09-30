@@ -1,0 +1,593 @@
+version: 6
+general:
+  checkForUpdates: true
+  updateOnBlockDamage: true
+  bypassNotification: true
+  ignoreSpectator: false
+  updateRadius: 2
+advanced:
+  verbose: false
+  threads: -1
+  obfuscation:
+    timeout: 10000
+  proximity:
+    defaultBucketSize: 50
+    threadCheckInterval: 50
+    playerCheckInterval: 5000
+cache:
+  enabled: true
+  memoryCache:
+    maximumSize: 32768
+    expireAfterAccess: 60000
+  diskCache:
+    enabled: false
+    directory: orebfuscator_cache
+    maximumOpenFiles: 256
+    deleteFilesAfterAccess: 172800000
+    maximumTaskQueueSize: 32768
+obfuscation:
+  obfuscation-overworld:
+    enabled: true
+    minY: -2032
+    maxY: 2031
+    worlds:
+    - world
+    layerObfuscation: false
+    hiddenBlocks:
+    - minecraft:ancient_debris
+    - minecraft:amethyst_block
+    - minecraft:budding_amethyst
+    - minecraft:tuff_bricks
+    - minecraft:chiseled_tuff
+    - minecraft:chiseled_tuff_bricks
+    - minecraft:polished_tuff
+    - minecraft:tuff_brick_slab
+    - minecraft:tuff_brick_stairs
+    - minecraft:tuff_brick_wall
+    - minecraft:polished_tuff_slab
+    - minecraft:polished_tuff_stairs
+    - minecraft:polished_tuff_wall
+    - minecraft:waxed_copper_block
+    - minecraft:waxed_cut_copper
+    - minecraft:waxed_chiseled_copper
+    - minecraft:waxed_copper_grate
+    - minecraft:waxed_copper_bulb
+    - minecraft:waxed_copper_door
+    - minecraft:waxed_copper_trapdoor
+    - minecraft:waxed_cut_copper_slab
+    - minecraft:waxed_cut_copper_stairs
+    - minecraft:waxed_exposed_copper
+    - minecraft:waxed_exposed_cut_copper
+    - minecraft:waxed_exposed_chiseled_copper
+    - minecraft:waxed_exposed_copper_grate
+    - minecraft:waxed_exposed_copper_bulb
+    - minecraft:waxed_exposed_copper_door
+    - minecraft:waxed_exposed_copper_trapdoor
+    - minecraft:waxed_exposed_cut_copper_slab
+    - minecraft:waxed_exposed_cut_copper_stairs
+    - minecraft:waxed_weathered_copper
+    - minecraft:waxed_weathered_cut_copper
+    - minecraft:waxed_weathered_chiseled_copper
+    - minecraft:waxed_weathered_copper_grate
+    - minecraft:waxed_weathered_copper_bulb
+    - minecraft:waxed_weathered_copper_door
+    - minecraft:waxed_weathered_copper_trapdoor
+    - minecraft:waxed_weathered_cut_copper_slab
+    - minecraft:waxed_weathered_cut_copper_stairs
+    - minecraft:waxed_oxidized_copper
+    - minecraft:waxed_oxidized_cut_copper
+    - minecraft:waxed_oxidized_chiseled_copper
+    - minecraft:waxed_oxidized_copper_grate
+    - minecraft:waxed_oxidized_copper_bulb
+    - minecraft:waxed_oxidized_copper_door
+    - minecraft:waxed_oxidized_copper_trapdoor
+    - minecraft:waxed_oxidized_cut_copper_slab
+    - minecraft:waxed_oxidized_cut_copper_stairs
+    - minecraft:reinforced_deepslate
+    - minecraft:sculk_shrieker
+    - minecraft:sculk_sensor
+    - minecraft:sculk_catalyst
+    - minecraft:mossy_stone_bricks
+    - minecraft:cracked_stone_bricks
+    - minecraft:chiseled_stone_bricks
+    - minecraft:infested_stone
+    - minecraft:infested_deepslate
+    - minecraft:infested_cobblestone
+    - minecraft:infested_stone_bricks
+    - minecraft:infested_mossy_stone_bricks
+    - minecraft:infested_cracked_stone_bricks
+    - minecraft:infested_chiseled_stone_bricks
+    - minecraft:mossy_cobblestone
+    - minecraft:spawner
+    - minecraft:beacon
+    - minecraft:conduit
+    - minecraft:lodestone
+    - minecraft:respawn_anchor
+    - minecraft:jukebox
+    - minecraft:chiseled_bookshelf
+    - minecraft:decorated_pot
+    - minecraft:diamond_block
+    - minecraft:emerald_block
+    - minecraft:gold_block
+    - minecraft:iron_block
+    - minecraft:netherite_block
+    - minecraft:lapis_block
+    - minecraft:trial_spawner
+    - minecraft:vault
+    - minecraft:heavy_core
+    - minecraft:end_portal_frame
+    - tag(minecraft:base_stone_overworld)
+    - tag(minecraft:coal_ores)
+    - tag(minecraft:copper_ores)
+    - tag(minecraft:diamond_ores)
+    - tag(minecraft:emerald_ores)
+    - tag(minecraft:gold_ores)
+    - tag(minecraft:iron_ores)
+    - tag(minecraft:lapis_ores)
+    - tag(minecraft:redstone_ores)
+    - minecraft:bedrock
+    - minecraft:raw_copper_block
+    - minecraft:raw_gold_block
+    - minecraft:raw_iron_block
+    - tag(minecraft:copper_chests)
+    - tag(minecraft:shulker_boxes)
+    - minecraft:barrel
+    - minecraft:chest
+    - minecraft:crafter
+    - minecraft:dispenser
+    - minecraft:dropper
+    - minecraft:ender_chest
+    - minecraft:hopper
+    - minecraft:trapped_chest
+    randomBlocks:
+      section-global:
+        minY: -2032
+        maxY: 2031
+        blocks:
+          minecraft:cave_air: 5
+          minecraft:cobblestone: 1
+          minecraft:mossy_cobblestone: 1
+          minecraft:obsidian: 1
+      section-stone:
+        minY: -5
+        maxY: 2031
+        blocks:
+          minecraft:stone: 15
+          minecraft:diamond_ore: 10
+          minecraft:emerald_ore: 5
+          minecraft:gold_ore: 5
+          minecraft:iron_ore: 5
+          minecraft:copper_ore: 5
+          minecraft:coal_ore: 5
+          minecraft:lapis_ore: 5
+          minecraft:redstone_ore: 5
+      section-deepslate:
+        minY: -2032
+        maxY: 5
+        blocks:
+          minecraft:deepslate: 15
+          minecraft:deepslate_diamond_ore: 10
+          minecraft:deepslate_emerald_ore: 5
+          minecraft:deepslate_gold_ore: 5
+          minecraft:deepslate_iron_ore: 5
+          minecraft:deepslate_copper_ore: 5
+          minecraft:deepslate_coal_ore: 5
+          minecraft:deepslate_lapis_ore: 5
+          minecraft:deepslate_redstone_ore: 5
+      section-bedrock:
+        minY: -64
+        maxY: -60
+        blocks:
+          minecraft:bedrock: 20
+  obfuscation-nether:
+    enabled: true
+    minY: -2032
+    maxY: 2031
+    worlds:
+    - world_nether
+    layerObfuscation: false
+    hiddenBlocks:
+    - minecraft:gilded_blackstone
+    - minecraft:polished_blackstone_bricks
+    - minecraft:cracked_polished_blackstone_bricks
+    - minecraft:gold_block
+    - minecraft:nether_bricks
+    - minecraft:nether_brick_fence
+    - minecraft:nether_brick_stairs
+    - minecraft:spawner
+    - minecraft:beacon
+    - minecraft:conduit
+    - minecraft:lodestone
+    - minecraft:respawn_anchor
+    - minecraft:jukebox
+    - minecraft:chiseled_bookshelf
+    - minecraft:decorated_pot
+    - minecraft:diamond_block
+    - minecraft:emerald_block
+    - minecraft:iron_block
+    - minecraft:netherite_block
+    - minecraft:lapis_block
+    - minecraft:trial_spawner
+    - minecraft:vault
+    - minecraft:heavy_core
+    - minecraft:end_portal_frame
+    - tag(minecraft:base_stone_nether)
+    - tag(minecraft:soul_fire_base_blocks)
+    - minecraft:ancient_debris
+    - minecraft:bedrock
+    - minecraft:nether_gold_ore
+    - minecraft:nether_quartz_ore
+    - tag(minecraft:copper_chests)
+    - tag(minecraft:shulker_boxes)
+    - minecraft:barrel
+    - minecraft:chest
+    - minecraft:crafter
+    - minecraft:dispenser
+    - minecraft:dropper
+    - minecraft:ender_chest
+    - minecraft:hopper
+    - minecraft:trapped_chest
+    randomBlocks:
+      section-global:
+        minY: -2032
+        maxY: 2031
+        blocks:
+          minecraft:netherrack: 4
+          minecraft:nether_quartz_ore: 1
+          minecraft:nether_gold_ore: 1
+          minecraft:ancient_debris: 1
+      section-bedrock-top:
+        minY: 123
+        maxY: 127
+        blocks:
+          minecraft:bedrock: 20
+      section-bedrock-bottom:
+        minY: 0
+        maxY: 4
+        blocks:
+          minecraft:bedrock: 20
+  obfuscation-end:
+    enabled: true
+    minY: -2032
+    maxY: 2031
+    worlds:
+    - world_the_end
+    layerObfuscation: false
+    hiddenBlocks:
+    - minecraft:beacon
+    - minecraft:conduit
+    - minecraft:lodestone
+    - minecraft:respawn_anchor
+    - minecraft:jukebox
+    - minecraft:chiseled_bookshelf
+    - minecraft:decorated_pot
+    - minecraft:diamond_block
+    - minecraft:emerald_block
+    - minecraft:gold_block
+    - minecraft:iron_block
+    - minecraft:netherite_block
+    - minecraft:lapis_block
+    - minecraft:trial_spawner
+    - minecraft:vault
+    - minecraft:heavy_core
+    - minecraft:end_portal_frame
+    - minecraft:end_stone
+    - minecraft:obsidian
+    - tag(minecraft:copper_chests)
+    - tag(minecraft:shulker_boxes)
+    - minecraft:barrel
+    - minecraft:chest
+    - minecraft:crafter
+    - minecraft:dispenser
+    - minecraft:dropper
+    - minecraft:ender_chest
+    - minecraft:hopper
+    - minecraft:trapped_chest
+    randomBlocks:
+      section-global:
+        minY: -2032
+        maxY: 2031
+        blocks:
+          minecraft:end_stone: 1
+          minecraft:end_stone_bricks: 1
+          minecraft:bedrock: 1
+          minecraft:obsidian: 1
+          minecraft:purpur_block: 1
+proximity:
+  proximity-overworld:
+    enabled: true
+    minY: -2032
+    maxY: 2031
+    worlds:
+    - world
+    distance: 24
+    frustumCulling:
+      enabled: true
+      minDistance: 3.0
+      fov: 80.0
+    rayCastCheck:
+      enabled: true
+      onlyCheckCenter: false
+    useBlockBelow: true
+    hiddenBlocks:
+      minecraft:ancient_debris: {}
+      tag(minecraft:coal_ores): {}
+      tag(minecraft:copper_ores): {}
+      tag(minecraft:iron_ores): {}
+      tag(minecraft:gold_ores): {}
+      tag(minecraft:redstone_ores): {}
+      tag(minecraft:lapis_ores): {}
+      minecraft:raw_iron_block: {}
+      minecraft:raw_copper_block: {}
+      minecraft:raw_gold_block: {}
+      minecraft:amethyst_block: {}
+      minecraft:budding_amethyst: {}
+      minecraft:tuff_bricks: {}
+      minecraft:chiseled_tuff: {}
+      minecraft:chiseled_tuff_bricks: {}
+      minecraft:polished_tuff: {}
+      minecraft:tuff_brick_slab: {}
+      minecraft:tuff_brick_stairs: {}
+      minecraft:tuff_brick_wall: {}
+      minecraft:polished_tuff_slab: {}
+      minecraft:polished_tuff_stairs: {}
+      minecraft:polished_tuff_wall: {}
+      minecraft:waxed_copper_block: {}
+      minecraft:waxed_cut_copper: {}
+      minecraft:waxed_chiseled_copper: {}
+      minecraft:waxed_copper_grate: {}
+      minecraft:waxed_copper_bulb: {}
+      minecraft:waxed_copper_door: {}
+      minecraft:waxed_copper_trapdoor: {}
+      minecraft:waxed_cut_copper_slab: {}
+      minecraft:waxed_cut_copper_stairs: {}
+      minecraft:waxed_exposed_copper: {}
+      minecraft:waxed_exposed_cut_copper: {}
+      minecraft:waxed_exposed_chiseled_copper: {}
+      minecraft:waxed_exposed_copper_grate: {}
+      minecraft:waxed_exposed_copper_bulb: {}
+      minecraft:waxed_exposed_copper_door: {}
+      minecraft:waxed_exposed_copper_trapdoor: {}
+      minecraft:waxed_exposed_cut_copper_slab: {}
+      minecraft:waxed_exposed_cut_copper_stairs: {}
+      minecraft:waxed_weathered_copper: {}
+      minecraft:waxed_weathered_cut_copper: {}
+      minecraft:waxed_weathered_chiseled_copper: {}
+      minecraft:waxed_weathered_copper_grate: {}
+      minecraft:waxed_weathered_copper_bulb: {}
+      minecraft:waxed_weathered_copper_door: {}
+      minecraft:waxed_weathered_copper_trapdoor: {}
+      minecraft:waxed_weathered_cut_copper_slab: {}
+      minecraft:waxed_weathered_cut_copper_stairs: {}
+      minecraft:waxed_oxidized_copper: {}
+      minecraft:waxed_oxidized_cut_copper: {}
+      minecraft:waxed_oxidized_chiseled_copper: {}
+      minecraft:waxed_oxidized_copper_grate: {}
+      minecraft:waxed_oxidized_copper_bulb: {}
+      minecraft:waxed_oxidized_copper_door: {}
+      minecraft:waxed_oxidized_copper_trapdoor: {}
+      minecraft:waxed_oxidized_cut_copper_slab: {}
+      minecraft:waxed_oxidized_cut_copper_stairs: {}
+      minecraft:reinforced_deepslate: {}
+      minecraft:sculk_shrieker: {}
+      minecraft:sculk_sensor: {}
+      minecraft:sculk_catalyst: {}
+      minecraft:mossy_stone_bricks: {}
+      minecraft:cracked_stone_bricks: {}
+      minecraft:chiseled_stone_bricks: {}
+      minecraft:infested_stone: {}
+      minecraft:infested_deepslate: {}
+      minecraft:infested_cobblestone: {}
+      minecraft:infested_stone_bricks: {}
+      minecraft:infested_mossy_stone_bricks: {}
+      minecraft:infested_cracked_stone_bricks: {}
+      minecraft:infested_chiseled_stone_bricks: {}
+      minecraft:beacon: {}
+      minecraft:conduit: {}
+      minecraft:lodestone: {}
+      minecraft:respawn_anchor: {}
+      minecraft:jukebox: {}
+      minecraft:chiseled_bookshelf: {}
+      minecraft:decorated_pot: {}
+      minecraft:diamond_block: {}
+      minecraft:emerald_block: {}
+      minecraft:gold_block: {}
+      minecraft:iron_block: {}
+      minecraft:netherite_block: {}
+      minecraft:lapis_block: {}
+      minecraft:trial_spawner: {}
+      minecraft:vault: {}
+      minecraft:heavy_core: {}
+      minecraft:end_portal_frame: {}
+      tag(minecraft:diamond_ores): {}
+      tag(minecraft:emerald_ores): {}
+      minecraft:mossy_cobblestone: {}
+      tag(minecraft:anvil): {}
+      tag(minecraft:beehives): {}
+      tag(minecraft:beds): {}
+      tag(minecraft:cauldrons): {}
+      minecraft:blast_furnace: {}
+      minecraft:brewing_stand: {}
+      minecraft:cartography_table: {}
+      minecraft:composter: {}
+      minecraft:crafting_table: {}
+      minecraft:enchanting_table: {}
+      minecraft:fletching_table: {}
+      minecraft:furnace: {}
+      minecraft:grindstone: {}
+      minecraft:lectern: {}
+      minecraft:loom: {}
+      minecraft:smithing_table: {}
+      minecraft:smoker: {}
+      minecraft:stonecutter: {}
+      minecraft:spawner: {}
+      tag(minecraft:copper_chests): {}
+      tag(minecraft:shulker_boxes): {}
+      minecraft:barrel: {}
+      minecraft:chest: {}
+      minecraft:crafter: {}
+      minecraft:dispenser: {}
+      minecraft:dropper: {}
+      minecraft:ender_chest: {}
+      minecraft:hopper: {}
+      minecraft:trapped_chest: {}
+    randomBlocks:
+      section-stone:
+        minY: -5
+        maxY: 2031
+        blocks:
+          minecraft:stone: 1
+      section-deepslate:
+        minY: -2032
+        maxY: 5
+        blocks:
+          minecraft:deepslate: 1
+  proximity-nether:
+    enabled: true
+    minY: -2032
+    maxY: 2031
+    worlds:
+    - world_nether
+    distance: 24
+    frustumCulling:
+      enabled: true
+      minDistance: 3.0
+      fov: 80.0
+    rayCastCheck:
+      enabled: true
+      onlyCheckCenter: false
+    useBlockBelow: true
+    hiddenBlocks:
+      minecraft:nether_quartz_ore: {}
+      minecraft:gilded_blackstone: {}
+      minecraft:polished_blackstone_bricks: {}
+      minecraft:cracked_polished_blackstone_bricks: {}
+      minecraft:gold_block: {}
+      minecraft:nether_bricks: {}
+      minecraft:nether_brick_fence: {}
+      minecraft:nether_brick_stairs: {}
+      minecraft:beacon: {}
+      minecraft:conduit: {}
+      minecraft:jukebox: {}
+      minecraft:chiseled_bookshelf: {}
+      minecraft:decorated_pot: {}
+      minecraft:diamond_block: {}
+      minecraft:emerald_block: {}
+      minecraft:iron_block: {}
+      minecraft:netherite_block: {}
+      minecraft:lapis_block: {}
+      minecraft:trial_spawner: {}
+      minecraft:vault: {}
+      minecraft:heavy_core: {}
+      minecraft:end_portal_frame: {}
+      minecraft:ancient_debris: {}
+      minecraft:lodestone: {}
+      minecraft:nether_gold_ore: {}
+      minecraft:respawn_anchor: {}
+      tag(minecraft:anvil): {}
+      tag(minecraft:beehives): {}
+      tag(minecraft:beds): {}
+      tag(minecraft:cauldrons): {}
+      minecraft:blast_furnace: {}
+      minecraft:brewing_stand: {}
+      minecraft:cartography_table: {}
+      minecraft:composter: {}
+      minecraft:crafting_table: {}
+      minecraft:enchanting_table: {}
+      minecraft:fletching_table: {}
+      minecraft:furnace: {}
+      minecraft:grindstone: {}
+      minecraft:lectern: {}
+      minecraft:loom: {}
+      minecraft:smithing_table: {}
+      minecraft:smoker: {}
+      minecraft:stonecutter: {}
+      minecraft:spawner: {}
+      tag(minecraft:copper_chests): {}
+      tag(minecraft:shulker_boxes): {}
+      minecraft:barrel: {}
+      minecraft:chest: {}
+      minecraft:crafter: {}
+      minecraft:dispenser: {}
+      minecraft:dropper: {}
+      minecraft:ender_chest: {}
+      minecraft:hopper: {}
+      minecraft:trapped_chest: {}
+    randomBlocks:
+      section-global:
+        minY: -2032
+        maxY: 2031
+        blocks:
+          minecraft:netherrack: 1
+  proximity-end:
+    enabled: true
+    minY: -2032
+    maxY: 2031
+    worlds:
+    - world_the_end
+    distance: 24
+    frustumCulling:
+      enabled: true
+      minDistance: 3.0
+      fov: 80.0
+    rayCastCheck:
+      enabled: true
+      onlyCheckCenter: false
+    useBlockBelow: true
+    hiddenBlocks:
+      minecraft:beacon: {}
+      minecraft:conduit: {}
+      minecraft:lodestone: {}
+      minecraft:respawn_anchor: {}
+      minecraft:jukebox: {}
+      minecraft:chiseled_bookshelf: {}
+      minecraft:decorated_pot: {}
+      minecraft:diamond_block: {}
+      minecraft:emerald_block: {}
+      minecraft:gold_block: {}
+      minecraft:iron_block: {}
+      minecraft:netherite_block: {}
+      minecraft:lapis_block: {}
+      minecraft:trial_spawner: {}
+      minecraft:vault: {}
+      minecraft:heavy_core: {}
+      minecraft:end_portal_frame: {}
+      minecraft:purpur_block: {}
+      minecraft:end_rod: {}
+      minecraft:dragon_head: {}
+      minecraft:elytra: {}
+      tag(minecraft:anvil): {}
+      tag(minecraft:beehives): {}
+      tag(minecraft:beds): {}
+      tag(minecraft:cauldrons): {}
+      minecraft:blast_furnace: {}
+      minecraft:brewing_stand: {}
+      minecraft:cartography_table: {}
+      minecraft:composter: {}
+      minecraft:crafting_table: {}
+      minecraft:enchanting_table: {}
+      minecraft:fletching_table: {}
+      minecraft:furnace: {}
+      minecraft:grindstone: {}
+      minecraft:lectern: {}
+      minecraft:loom: {}
+      minecraft:smithing_table: {}
+      minecraft:smoker: {}
+      minecraft:stonecutter: {}
+      minecraft:spawner: {}
+      tag(minecraft:copper_chests): {}
+      tag(minecraft:shulker_boxes): {}
+      minecraft:barrel: {}
+      minecraft:chest: {}
+      minecraft:crafter: {}
+      minecraft:dispenser: {}
+      minecraft:dropper: {}
+      minecraft:ender_chest: {}
+      minecraft:hopper: {}
+      minecraft:trapped_chest: {}
+    randomBlocks:
+      section-global:
+        minY: -2032
+        maxY: 2031
+        blocks:
+          minecraft:end_stone: 1
