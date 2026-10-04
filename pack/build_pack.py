@@ -1,7 +1,7 @@
 """Builds DepthsGuard-pack.zip from the vanilla client jar.
 
 Every file in the pack is an untouched vanilla file. Because the server pack
-always loads above the player's own packs, these copies win over any xray or
+always loads above the player's own packs, these copies win over any
 invis-particle pack that edits the same paths.
 """
 import hashlib, json, os, sys, zipfile
@@ -19,12 +19,6 @@ def lines(name):
             if l.strip() and not l.startswith("#")]
 
 
-def ref(name, folder):
-    # "minecraft:block/stone" or "block/stone" -> assets/minecraft/<folder>/block/stone
-    name = name.split(":", 1)[-1]
-    return f"{MC}{folder}/{name}"
-
-
 def main():
     jar = zipfile.ZipFile(JAR)
     names = set(jar.namelist())
@@ -38,41 +32,7 @@ def main():
             return True
         return False
 
-    seen_models = set()
-
-    def add_model(model):
-        path = ref(model, "models") + ".json"
-        if path in seen_models:
-            return
-        seen_models.add(path)
-        if not add(path):
-            return  # builtin/generated etc.
-        data = json.loads(jar.read(path))
-        if "parent" in data:
-            add_model(data["parent"])
-        for tex in data.get("textures", {}).values():
-            if not tex.startswith("#"):
-                add(ref(tex, "textures") + ".png")
-
-    def walk_models(node):
-        if isinstance(node, dict):
-            for k, v in node.items():
-                if k == "model" and isinstance(v, str):
-                    add_model(v)
-                else:
-                    walk_models(v)
-        elif isinstance(node, list):
-            for v in node:
-                walk_models(v)
-
     missing = []
-    for block in lines("blocks.txt"):
-        bs = f"{MC}blockstates/{block}.json"
-        if not add(bs):
-            missing.append(block)
-            continue
-        walk_models(json.loads(jar.read(bs)))
-
     for extra in lines("extra.txt"):
         full = MC + extra
         if extra.endswith("/"):
